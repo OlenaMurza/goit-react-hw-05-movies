@@ -35,8 +35,10 @@ export const Cast = () => {
 };
 
 Cast.propTypes = {
-    id: propTypes.number,
-    profile_path: propTypes.string,
-    name: propTypes.string,
-    character: propTypes.string,
-}
+  cast: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.number,
+      profile_path: propTypes.string,
+      name: propTypes.string,
+      character: propTypes.string,
+    }))}

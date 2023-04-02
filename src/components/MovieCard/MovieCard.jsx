@@ -1,4 +1,5 @@
 import { Container, Img, Title, Wrapper, Year, Description, Text } from './MovieCard.styled';
+import PropTypes from 'prop-types';
 
 export const MovieCard = ({ movie }) => {
   const { poster_path, title, release_date, vote_average, overview, genres } = movie;
@@ -29,3 +30,7 @@ export const MovieCard = ({ movie }) => {
     </Container>
   );
 };
+
+MovieCard.protoTypes = {
+  movie: PropTypes.array
+}

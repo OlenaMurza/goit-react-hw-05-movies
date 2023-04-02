@@ -6,6 +6,7 @@ import {
   MovieImg,
   MovieName,
 } from './MoviesList.styled';
+import PropTypes from 'prop-types';
 
 export const MoviesList = ({ movies }) => {
   const location = useLocation();
@@ -24,3 +25,14 @@ export const MoviesList = ({ movies }) => {
     </MovieList>
   );
 };
+
+MovieList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      original_name: PropTypes.string.isRequired,
+      poster_path: PropTypes.object.isRequired,
+    })
+  )
+}

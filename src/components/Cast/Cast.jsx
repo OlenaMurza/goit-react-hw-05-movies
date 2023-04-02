@@ -33,3 +33,10 @@ export const Cast = () => {
     </List>
   );
 };
+
+Cast.propTypes = {
+      id: propTypes.number,
+      profile_path: propTypes.string,
+      name: propTypes.string,
+      character: propTypes.string,
+}

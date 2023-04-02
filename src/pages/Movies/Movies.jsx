@@ -14,6 +14,7 @@ export const Movies = () => {
     if (!query) {
       return;
     }
+
     getMovieByName(query).then(setMovies);
   }, [searchParams]);
 
@@ -24,6 +25,7 @@ export const Movies = () => {
   const handleSubmit = e => {
     e.preventDefault();
     setSearchParams(query !== '' ? { query } : {});
+    e.target.reset()
   };
 
   return (

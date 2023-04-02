@@ -9,3 +9,8 @@ export const SearchBox = ({ onChange, onSubmit }) => {
     </Form>
   );
 };
+
+SearchBox.propTypes = {
+    onChange: PropTypes.func,
+    onSubmit: PropTypes.func
+}

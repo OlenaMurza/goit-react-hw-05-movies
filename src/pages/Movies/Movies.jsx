@@ -25,7 +25,7 @@ export const Movies = () => {
   const handleSubmit = e => {
     e.preventDefault();
     setSearchParams(query !== '' ? { query } : {});
-    e.target.reset()
+    e.target.reset({ query: '' })
   };
 
   return (
